@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+
+
+		}
+		#box{
+  			background-color: red;
+  			height:200px;
+  			width:200px;
+  			border:1px solid black;
+  			position: absolute;
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+<div id="box" >
+
+
+
+</div>
+
+
+
+<script>
+var el=document.getElementById("box");
+document.addEventListener("click", func);
+
+
+var leftm=0;
+var topm=0;
+
+
+function func(event){
+	console.log("hello "+event);
+	var xcor=event.clientX;
+	var ycor=event.clientY;
+	var coor = "Coordinates: (" + xcor + "," + ycor + ")";
+	console.log(coor);
+	leftm=xcor;
+	topm=ycor;
+	
+
+	el.style.left=leftm + "px";
+	el.style.top=topm+"px";
+
+
+}
+
+
+</script>
+</body>
+</html>
